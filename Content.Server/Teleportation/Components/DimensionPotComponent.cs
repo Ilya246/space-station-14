@@ -22,22 +22,22 @@ public sealed class DimensionPotComponent : Component
     public EntityUid? PotPortal = null;
 
     /// <summary>
-    /// The portal in the pocket dimension, usually exists.
+    /// The portal in the pocket dimension, exists after first opening.
     /// </summary>
     [ViewVariables]
     public EntityUid? DimensionPortal = null;
 
     /// <summary>
-    /// Map of the pocket dimension, usually exists.
+    /// Map of the pocket dimension, exists after first opening.
     /// </summary>
     [ViewVariables]
-    public MapId PocketDimensionMap = MapId.Nullspace;
+    public EntityUid? PocketDimensionMap = MapId.Nullspace;
 
     /// <summary>
     /// Path to the pocket dimension's map file
     /// </summary>
     [DataField("pocketDimensionPath")]
-    public string PocketDimensionPath = "/Maps/Misc/pocket_dimension.yml";
+    public ResPath PocketDimensionPath = new ResPath("/Maps/Misc/pocket_dimension.yml");
 
     /// <summary>
     /// The prototype to spawn for the portal spawned on the pot.
